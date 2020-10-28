@@ -5,6 +5,7 @@
  */
 package jptvr19klishinkitchen;
 
+import Tools.ItemSaver;
 import entity.Item;
 
 /**
@@ -12,7 +13,11 @@ import entity.Item;
  * @author pupil
  */
 public class App {
-    private Item[] items = new Item[];
+     private Item[] items = new Item[10];
+     private Customer[] customers = new Customer[10];
+     
+     private ItemSaver[] itemSaver = new ItemSaver[10];
+    
 
     void run() {
         
