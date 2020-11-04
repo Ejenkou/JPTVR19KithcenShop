@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tools;
+package Tools.Savers;
 
 import entity.Item;
 import java.io.FileNotFoundException;
@@ -22,7 +22,7 @@ public class ItemSaver {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try{
-            fos= new FileOutputStream("books");
+            fos= new FileOutputStream("items");
             oos= new ObjectOutputStream(fos);
             oos.writeObject(items);
             oos.flush();
