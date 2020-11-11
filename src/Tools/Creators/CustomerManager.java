@@ -24,7 +24,7 @@ public class CustomerManager {
         customer.setLastname(scanner.nextLine());
         System.out.print("Введите телефон: ");
         customer.setPhone(scanner.nextLine());
-        System.out.print("Введите ваш счет: ");
+        System.out.print("Введите ваш баланс: ");
         customer.setWallet(scanner.nextInt());
         this.printCustomer(customer);
         return customer;
@@ -45,6 +45,7 @@ public class CustomerManager {
                 +" "
                 + customer.getLastname()
         );
+        System.out.println(" Ваш баланс: " + customer.getWallet() + " евро");
     }
 
     public void printListCustomers(Customer[] customers) {

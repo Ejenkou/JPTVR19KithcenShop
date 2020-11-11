@@ -17,16 +17,29 @@ import java.util.Scanner;
  * @author pupil
  */
 public class MemberManager {
+
+    public static Item takeOnItem() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private Scanner scanner = new Scanner(System.in);
     private CustomerManager customerManager = new CustomerManager();
     private ItemManager itemManager = new ItemManager();
-}
+    public Item takeOnItem(Item[] items, Customer[] customers) {
+        System.out.println("Какой товар вы хотите преобрести?");
+        itemManager.printListItems(items);
+        
+        
+        
+    
+   
+   }
+} 
+
 
     
 
 
     
-
 
 
 
