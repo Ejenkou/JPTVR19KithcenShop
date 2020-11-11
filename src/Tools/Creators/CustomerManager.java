@@ -20,10 +20,12 @@ public class CustomerManager {
         System.out.println("--- Добавление нового покупателя в базу данных ---");
         System.out.print("Введите имя: ");
         customer.setFirstname(scanner.nextLine());
-        System.out.print("Введите фамилию: ");
+        System.out.print("Введите Фамилию: ");
         customer.setLastname(scanner.nextLine());
         System.out.print("Введите телефон: ");
         customer.setPhone(scanner.nextLine());
+        System.out.print("Введите ваш счет: ");
+        customer.setWallet(scanner.nextInt());
         this.printCustomer(customer);
         return customer;
     }
@@ -38,7 +40,7 @@ public class CustomerManager {
     }
 
     public void printCustomer(Customer customer) {
-        System.out.println("Имя читателя: "
+        System.out.println("Имя покупателя: "
                 +customer.getFirstname()
                 +" "
                 + customer.getLastname()

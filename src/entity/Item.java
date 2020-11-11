@@ -52,4 +52,10 @@ public Item(String name, String firm, Integer price, String isbn) {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" + "name=" + name + ", firm=" + firm + ", price=" + price + ", number=" + isbn + '}';
+    }
+    
 }

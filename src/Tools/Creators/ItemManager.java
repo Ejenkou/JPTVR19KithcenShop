@@ -23,9 +23,10 @@ public class ItemManager {
       item.setFirm(scanner.nextLine());
       System.out.print("Введите желаемую цену:  ");
       item.setPrice(scanner.nextInt());
-      System.out.print("Введите ISBN товара");
+      scanner.nextLine();
+      System.out.print("Введите серийный номер товара:");
       item.setIsbn(scanner.nextLine());
-      System.out.println("Создана книга: "+ item.getName());
+      System.out.println("Создан Товар: "+ item.getName());
       return item;
 }
    public void addItemToArray(Item item, Item[] items) {

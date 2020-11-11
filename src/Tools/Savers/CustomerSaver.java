@@ -31,7 +31,7 @@ public class CustomerSaver {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try {
-            fos = new FileOutputStream("readers");
+            fos = new FileOutputStream("customers");
             oos = new ObjectOutputStream(fos);
             oos.writeObject(customers);
             oos.flush();

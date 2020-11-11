@@ -17,14 +17,16 @@ public class Customer implements Serializable{
     private String firstname;
     private String lastname;
     private String phone;
+    private Integer wallet;
 
     public Customer() {
     }
 
-    public Customer(String firstname, String lastname, String phone) {
+    public Customer(String firstname, String lastname, String phone, Integer wallet) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
+        this.wallet = wallet;
     }
 
     public String getFirstname() {
@@ -50,13 +52,21 @@ public class Customer implements Serializable{
     public void setPhone(String phone) {
         this.phone = phone;
     }
+     public Integer getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(Integer wallet) {
+        this.wallet = wallet;
+    }
 
     @Override
     public String toString() {
-        return "Reader{" 
+        return "Customer{" 
                 + "firstname=" + firstname 
                 + ", lastname=" + lastname 
-                + ", phone=" + phone 
+                + ", phone=" + phone
+                + ", wallet=" + wallet
                 + '}';
     }
     
