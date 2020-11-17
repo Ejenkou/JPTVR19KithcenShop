@@ -3,15 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/Tools/Savers/ItemSaver.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/entity/Item.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/jptvr19klishinkitchen/App.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/Tools/Creators/CustomerManager.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/Tools/Creators/ItemManager.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/Tools/Savers/CustomerSaver.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/entity/Customer.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/Tools/Savers/HistorySaver.java</file>
-            <file>file:/C:/Users/pupil/Documents/NetBeansProjects/JPTVR19/JPTVR19KithcenShop/src/Tools/Creators/MemberManager.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/Tools/Creators/ItemManager.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/Tools/Creators/MemberManager.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/entity/Item.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/Tools/Creators/CustomerManager.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/jptvr19klishinkitchen/App.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/entity/History.java</file>
+            <file>file:/D:/mc/Git/JPTVR19KlishinKithcenItems/src/entity/Customer.java</file>
         </group>
     </open-files>
 </project-private>

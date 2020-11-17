@@ -17,6 +17,7 @@ public class History implements Serializable{
     
     private Item item;
     private Customer customer;
+    
 
 
     public History(Item item, Customer customer, Date giveOutDate, Date returnDate) {
@@ -26,9 +27,8 @@ public class History implements Serializable{
         
     }
 
-    public History() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public History() {}
+    
 
 
     public Item getItem() {

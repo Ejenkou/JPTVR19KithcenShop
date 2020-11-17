@@ -76,7 +76,7 @@ public class App {
                     break;
                 case "5":
                     System.out.println("--- Купить товар ---");
-                    System.out.println("На данный момент нет такой возможности.");
+                    History history = memberManager.takeOnItem(items, customers);
                     
                     
                     break;
