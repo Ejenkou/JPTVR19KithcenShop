@@ -76,7 +76,13 @@ public class App {
                     break;
                 case "5":
                     System.out.println("--- Купить товар ---");
+                    
                     History history = memberManager.takeOnItem(items, customers);
+                    memberManager.addHistoryToArray(history,histories);
+                    historySaver.saveHistories(histories);
+
+                    System.out.println();
+                    
                     
                     
                     break;
