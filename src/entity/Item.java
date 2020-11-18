@@ -38,11 +38,13 @@ public Item(String name, String firm, Integer price, String isbn) {
     public void setFirm(String firm) {
         this.firm = firm;
     }
-    public Integer getPrice() {
-        return price;
+    public double getPrice() {
+        double dPrice = price;
+        return dPrice / 100;
     }
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setPrice(double price) {
+        
+        this.price = (int)(price * 100);
     }
     
      public String getIsbn() {
@@ -55,7 +57,7 @@ public Item(String name, String firm, Integer price, String isbn) {
 
     @Override
     public String toString() {
-        return "Item{" + "name=" + name + ", firm=" + firm + ", price=" + price + ", number=" + isbn + '}';
+        return "Item{" + "name=" + name + ", firm=" + firm + ", price=" + getPrice() + ", number=" + isbn + '}';
     }
     
 }

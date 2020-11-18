@@ -28,36 +28,35 @@ public class MemberManager {
         int readerNumber = scanner.nextInt();
         scanner.nextLine();
         Customer customer = customers[readerNumber-1];
-        history.setCustomer(customer);
-        this.addingBalance(history);
-        System.out.println("Какой товар вы хотите преобрести?");
+        System.out.println("Список товаров:");
         itemManager.printListItems(items);
-        int number;
-        number = scanner.nextInt();
+        System.out.println("Какой товар вы хотите преобрести?");
+        int numberItem;
+        numberItem = scanner.nextInt();
         scanner.nextLine();
-        Item item = items[number-1];
-        history.setItem(item);
-        Calendar calendar = new GregorianCalendar();
-        history.setGiveOutDate(calendar.getTime());
+        Item item = items[numberItem-1];
+        if (customer.getWallet() >= item.getPrice()){
+            Calendar calendar = new GregorianCalendar();
+            history.setGiveOutDate(calendar.getTime());
+            history.setCustomer(customer);
+            history.setItem(item);
+            System.out.printf("Товар \"%s\" куплен пользователем %s %s%n"
+                    ,history.getItem().getName()
+                    ,history.getCustomer().getFirstname()
+                    ,history.getCustomer().getLastname()
+            );
+            return history;
+        }else{
+            System.out.println("Не хватает средств, пополните баланс.");
+            return null;
+        }
         
-        
-        System.out.printf("Товар \"%s\" куплен пользователем %s %s%n"
-                ,history.getItem().getName()
-                ,history.getCustomer().getFirstname()
-                ,history.getCustomer().getLastname()
-        );
-        return history;
+       
         
     }
     
-     public void addingBalance(History history, Customer customer) {
+     public void addingBalance(Customer customer) {
          //Баланс покупателя
-         Wallet wallet = new Wallet();
-         wallet = customer.getWallet();
-        System.out.println();
-        
-        //System.out.println("Ваш баланс: " + wallet + " евро");
-        
         System.out.println();
         System.out.println("Желаете ли Вы пополнить баланс?");
         System.out.println("1. Да");
@@ -65,26 +64,12 @@ public class MemberManager {
         String choice = scanner.nextLine();
         if (choice.equals("2")) {
             System.out.println();
-            
-            //System.out.println("Ваш баланс: " + wallet + " евро");
-            
-            
+            return;
         }
         if (choice.equals("1")) {
-            
             System.out.print("Введите сумму, которую желаете пополнить: ");
-            int userBalance = scanner.nextInt();
-            
-        
-            
-           
-            
-
-            //Добавить сумму к балансу wallet =  + userBalance;
-            System.out.println();
-            
-            //System.out.println("Ваш баланс: " + wallet + " евро");
-            
+            int newCash = scanner.nextInt();
+            customer.setWallet(customer.getWallet()+ newCash);
         }
     }
 
