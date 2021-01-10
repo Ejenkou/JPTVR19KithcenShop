@@ -21,7 +21,7 @@ public class ItemManager {
       item.setName(scanner.nextLine());
       System.out.print("Введите название фирмы: ");
       item.setFirm(scanner.nextLine());
-      System.out.print("Введите желаемую цену: ");
+      System.out.print("Введите цену: ");
       double price = scanner.nextDouble();
       item.setPrice(price);
       scanner.nextLine();

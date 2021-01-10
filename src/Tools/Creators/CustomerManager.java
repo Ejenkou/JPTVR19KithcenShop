@@ -25,7 +25,8 @@ public class CustomerManager {
         System.out.print("Введите телефон: ");
         customer.setPhone(scanner.nextLine());
         System.out.print("Введите ваш баланс: ");
-        customer.setWallet(scanner.nextInt());
+        Double wallet = scanner.nextDouble();
+        customer.setWallet((int)(wallet * 100));
         this.printCustomer(customer);
         return customer;
     }

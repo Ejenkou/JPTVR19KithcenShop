@@ -36,6 +36,9 @@ public class MemberManager {
         scanner.nextLine();
         Item item = items[numberItem-1];
         if (customer.getWallet() >= item.getPrice()){
+            Double wallet = (double)customer.getWallet()/100;
+            Integer newPrice = (int)((wallet-item.getPrice())*100);
+            customer.setWallet(newPrice);
             Calendar calendar = new GregorianCalendar();
             history.setGiveOutDate(calendar.getTime());
             history.setCustomer(customer);

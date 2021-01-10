@@ -62,11 +62,12 @@ public class Customer implements Serializable{
 
     @Override
     public String toString() {
+        double dWallet = (double)wallet / 100;
         return "Customer{" 
                 + "firstname=" + firstname 
                 + ", lastname=" + lastname 
                 + ", phone=" + phone
-                + ", wallet=" + wallet
+                + ", wallet=" + dWallet
                 + '}';
     }
     
