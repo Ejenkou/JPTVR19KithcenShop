@@ -6,21 +6,21 @@
 package entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
 
 /**
  *
  * @author pupil
  */
 
-    
+@Entity    
 public class Customer implements Serializable{
     private String firstname;
     private String lastname;
     private String phone;
     private Integer wallet;
 
-    public Customer() {
-    }
+    
 
     public Customer(String firstname, String lastname, String phone, Integer wallet) {
         this.firstname = firstname;

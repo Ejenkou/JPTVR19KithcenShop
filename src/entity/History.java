@@ -7,11 +7,13 @@ package entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
 
 /**
  *
  * @author pupil
  */
+@Entity
 public class History implements Serializable{
     private Date giveOutDate;
     

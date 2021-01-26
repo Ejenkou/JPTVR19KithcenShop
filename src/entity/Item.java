@@ -6,11 +6,13 @@
 package entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
 
 /**
  *
  * @author pupil
  */
+@Entity
 public class Item implements Serializable{
     private String name;
     private String firm;

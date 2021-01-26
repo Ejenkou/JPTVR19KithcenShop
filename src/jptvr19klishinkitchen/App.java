@@ -31,6 +31,13 @@ public class App {
      private CustomerSaver customerSaver = new CustomerSaver();
      private MemberManager memberManager = new MemberManager();
      private HistorySaver historySaver = new HistorySaver();
+     private Retentive saver = new PersistToDatabase();
+     
+     public App(){
+         this.items = saver.loadItems();
+         this.customers = saver.loadCustomers();
+         this.histories = saver.loadHistories();
+     }
      
      void run() { 
         boolean repeat = true;
@@ -54,8 +61,9 @@ public class App {
                 case "1":
                     System.out.println("--- Добавить товар ---");
                     Item item = itemManager.createItem();
-                    itemManager.addItemToArray(item,items);
-                    itemSaver.saveItems(items);
+                    if (item != null){
+                        items.add(item);
+                    }
                     
                     break;
                 case "2":
@@ -93,6 +101,7 @@ public class App {
             }
         }       while(repeat);
 }
+
 
 
      
