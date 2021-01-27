@@ -31,7 +31,7 @@ public class App {
      private CustomerSaver customerSaver = new CustomerSaver();
      private MemberManager memberManager = new MemberManager();
      private HistorySaver historySaver = new HistorySaver();
-     private Retentive saver = (Retentive) new PersistToDatabase();
+     private Retentive saver = new PersistToDatabase();
      private  List<Item> items;
      private  List<Customer> customers;
      private  List<History> histories;
