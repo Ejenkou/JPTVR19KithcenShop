@@ -6,6 +6,7 @@
 package Tools.Creators;
 
 import entity.Item;
+import java.util.List;
 import java.util.Scanner;
 
 /** Добавить товар
@@ -45,6 +46,10 @@ public class ItemManager {
                 System.out.println(i+1+". " + items[i].toString());
             }
         }   
+    }
+
+    public void printListItems(List<Item> items) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

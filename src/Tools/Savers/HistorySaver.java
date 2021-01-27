@@ -16,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.List;
 
 
 public class HistorySaver {
@@ -53,6 +54,10 @@ public class HistorySaver {
         }
         return histories;
   
+    }
+
+    public void saveHistories(List<History> histories) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

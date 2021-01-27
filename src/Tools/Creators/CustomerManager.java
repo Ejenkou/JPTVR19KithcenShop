@@ -7,6 +7,7 @@ package Tools.Creators;
 
 
 import entity.Customer;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -55,6 +56,14 @@ public class CustomerManager {
                 System.out.println(i+1+". " + customers[i].toString());
             }
         }
+    }
+
+    public void addCustomerToArray(Customer customer, List<Customer> customers) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void printListCustomers(List<Customer> customers) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -19,6 +19,8 @@ public class Customer implements Serializable{
     private String lastname;
     private String phone;
     private Integer wallet;
+    
+    
 
     
 
@@ -69,6 +71,10 @@ public class Customer implements Serializable{
                 + ", phone=" + phone
                 + ", wallet=" + dWallet
                 + '}';
+    }
+    
+    public Customer() {
+        
     }
     
     

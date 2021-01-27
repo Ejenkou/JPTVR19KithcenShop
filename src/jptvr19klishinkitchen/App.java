@@ -5,6 +5,7 @@
  */
 package jptvr19klishinkitchen;
 
+import Tools.Savers.PersistToDatabase;
 import Tools.Creators.CustomerManager;
 import Tools.Creators.ItemManager;
 import Tools.Creators.MemberManager;
@@ -14,6 +15,8 @@ import Tools.Savers.ItemSaver;
 import entity.Customer;
 import entity.History;
 import entity.Item;
+import interfaces.Retentive;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -21,17 +24,18 @@ import java.util.Scanner;
  * @author pupil
  */
 public class App {
-     private Item[] items = new Item[10];
-     private History[] histories = new History[10];
-     private Customer[] customers = new Customer[10];
-     
+    
      private ItemSaver itemSaver = new ItemSaver();
      private ItemManager itemManager = new ItemManager();
      private CustomerManager customerManager = new CustomerManager();
      private CustomerSaver customerSaver = new CustomerSaver();
      private MemberManager memberManager = new MemberManager();
      private HistorySaver historySaver = new HistorySaver();
-     private Retentive saver = new PersistToDatabase();
+     private Retentive saver = (Retentive) new PersistToDatabase();
+     private  List<Item> items;
+     private  List<Customer> customers;
+     private  List<History> histories;
+     
      
      public App(){
          this.items = saver.loadItems();
@@ -63,6 +67,7 @@ public class App {
                     Item item = itemManager.createItem();
                     if (item != null){
                         items.add(item);
+                        saver.saveItem(item);
                     }
                     
                     break;

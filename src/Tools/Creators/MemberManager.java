@@ -10,6 +10,7 @@ import entity.History;
 import entity.Item;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -112,6 +113,14 @@ public class MemberManager {
                 );
             }
         }
+    }
+
+    public History takeOnItem(List<Item> items, List<Customer> customers) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void addHistoryToArray(History history, List<History> histories) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
         
