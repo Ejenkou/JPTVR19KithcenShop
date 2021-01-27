@@ -49,7 +49,11 @@ public class ItemManager {
     }
 
     public void printListItems(List<Item> items) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i = 0; i < items.size(); i++) {
+            if(items.get(i) != null) {
+                System.out.println(i+1+". "+ items.get(i).toString());
+            }
+        }
     }
     
 }

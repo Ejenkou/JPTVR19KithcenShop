@@ -5,12 +5,12 @@
     <class>entity.Customer</class>
     <class>entity.History</class>
     <class>entity.Item</class>
-    <shared-cache-mode>DISABLE_SELECTIVE</shared-cache-mode>
+ 
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jptvr19klishinkitchenitems?zeroDateTimeBehavior=convertToNull&amp;characterEncoding=utf8&amp;useUnicode=true"/>
       <property name="javax.persistence.jdbc.user" value="jptvr19klishinkitchenitems"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="G2cmmMggJdfyu3YB"/>
+      <property name="javax.persistence.jdbc.password" value="jptvr19klishinkitchenitems"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>

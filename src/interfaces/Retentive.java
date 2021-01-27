@@ -17,13 +17,13 @@ import java.util.List;
  * @author ejenk
  */
 public interface Retentive {
-    public void saveCustomer(Customer customer);
-    public void saveItem(Item item);
-    public void saveHistory(History history,boolean update);
+    public void saveCustomers(List<Customer> customers);
+    public void saveItems(List<Item> items);
+    public void saveHistories(List<History> histories,boolean update);
     public List<Customer> loadCustomers();
     public List<Item> loadItems();
     public List<History> loadHistories();
-    public void freeResources();
+  
     
 }
 

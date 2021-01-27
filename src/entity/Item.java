@@ -33,6 +33,7 @@ public Item(String name, String firm, Integer price, String isbn) {
         this.price = price;
         this.isbn = isbn;
     }
+
     public String getName() {
         return name;
     }
@@ -51,7 +52,6 @@ public Item(String name, String firm, Integer price, String isbn) {
         return dPrice / 100;
     }
     public void setPrice(double price) {
-        
         this.price = (int)(price * 100);
     }
     
@@ -66,6 +66,14 @@ public Item(String name, String firm, Integer price, String isbn) {
     @Override
     public String toString() {
         return "Item{" + "name=" + name + ", firm=" + firm + ", price=" + getPrice() + ", number=" + isbn + '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
 }

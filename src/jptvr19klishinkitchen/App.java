@@ -67,7 +67,7 @@ public class App {
                     Item item = itemManager.createItem();
                     if (item != null){
                         items.add(item);
-                        saver.saveItem(item);
+                        saver.saveItems(items);
                     }
                     
                     break;

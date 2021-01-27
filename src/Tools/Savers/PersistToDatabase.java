@@ -29,36 +29,42 @@ public class PersistToDatabase implements Retentive {
     
     public PersistToDatabase() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPTVR19KlishinKitchenPU");
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction tx = em.getTransaction();
+        em = emf.createEntityManager();
+        tx = em.getTransaction();
     }
-        
-        
-        
-    
-    
 
     @Override
-    public void saveCustomer(Customer customer) {
+    public void saveCustomers(List<Customer> customers) {
         tx.begin();
-        em.persist(customer);
+        for(Customer c : customers){
+            if(c.getId() == null){
+                em.persist(c);
+            }
+        }
         tx.commit();
     }
-
+    
     @Override
-    public void saveItem(Item item) {
+    public void saveItems(List<Item> items) {
         tx.begin();
-        em.persist(item);
-        tx.commit();
+        for(Item item : items){
+            if(item.getId() == null){
+                em.persist(item);
+            }
+            tx.commit();
+        }
+
     }
 
     @Override
-    public void saveHistory(History history, boolean update) {
+    public void saveHistories(List<History> histories, boolean update) {
         tx.begin();
-        if(update){
-            em.merge(history);
-        }else{
-            em.persist(history);
+        for(History h : histories){
+            if(update){
+                em.merge(h);
+            }else{
+                em.persist(h);
+            }
         }
         tx.commit();
     }
@@ -92,9 +98,6 @@ public class PersistToDatabase implements Retentive {
     }
     
 
-    @Override
-    public void freeResources() {
-       if(em != null) em.close();
-    }
+    
     
 }

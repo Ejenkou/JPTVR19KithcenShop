@@ -25,10 +25,6 @@ public class Customer implements Serializable{
     private String lastname;
     private String phone;
     private Integer wallet;
-    
-    
-
-    
 
     public Customer(String firstname, String lastname, String phone, Integer wallet) {
         this.firstname = firstname;
@@ -81,6 +77,14 @@ public class Customer implements Serializable{
     
     public Customer() {
         
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
     
